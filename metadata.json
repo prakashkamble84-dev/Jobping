@@ -1,0 +1,6 @@
+{
+  "name": "JobReady AI",
+  "description": "Prepare Better. Apply Smarter. Get Job-Ready. AI-powered career preparation for Indian 12th pass, ITI, diploma, graduates, and freshers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

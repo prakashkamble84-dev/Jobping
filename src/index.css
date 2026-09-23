@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #00B074;
+  --color-brand-green-dark: #009663;
+  --color-brand-green-light: #E6F7F1;
+  --color-brand-navy: #0A192F;
+  --color-brand-navy-light: #172A45;
+  --color-brand-navy-dark: #050D1A;
+  --color-brand-blue: #0088FF;
+  --color-brand-blue-light: #EBF5FF;
+  --color-brand-orange: #FF7A00;
+  --color-brand-orange-light: #FFF2E6;
+}
+
+@keyframes pingSlow {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.animate-ping-slow {
+  animation: pingSlow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

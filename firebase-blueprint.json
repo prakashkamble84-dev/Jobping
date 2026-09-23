@@ -1,0 +1,135 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Authenticated user profile in JobReady AI",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique authenticated user ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "User's full name",
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address",
+          "format": "email"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp or server timestamp of creation"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp or server timestamp of last update"
+        }
+      },
+      "required": ["uid", "name", "email", "createdAt", "updatedAt"]
+    },
+    "CareerProfile": {
+      "title": "CareerProfile",
+      "description": "Career profile and readiness information for a user",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Owner user ID"
+        },
+        "careerGoal": {
+          "type": "string",
+          "description": "Summary or specific career goal description",
+          "maxLength": 500
+        },
+        "jobPreference": {
+          "type": "string",
+          "description": "Looking for: First Job, Better Job, Career Change, Internship, Part-time Work",
+          "maxLength": 100
+        },
+        "education": {
+          "type": "string",
+          "description": "Highest education: 10th, 12th, ITI, Diploma, Graduate, Post Graduate, Other",
+          "maxLength": 100
+        },
+        "experienceLevel": {
+          "type": "string",
+          "description": "Experience tier",
+          "maxLength": 100
+        },
+        "targetJob": {
+          "type": "string",
+          "description": "Target job title",
+          "maxLength": 120
+        },
+        "preferredCity": {
+          "type": "string",
+          "description": "Preferred work city",
+          "maxLength": 100
+        },
+        "preferredState": {
+          "type": "string",
+          "description": "Preferred work state",
+          "maxLength": 100
+        },
+        "workPreference": {
+          "type": "string",
+          "description": "Work style: Office, Remote, Hybrid, Any",
+          "maxLength": 50
+        },
+        "salaryMin": {
+          "type": "string",
+          "description": "Minimum expected monthly or annual salary",
+          "maxLength": 50
+        },
+        "salaryMax": {
+          "type": "string",
+          "description": "Maximum expected monthly or annual salary",
+          "maxLength": 50
+        },
+        "skills": {
+          "type": "array",
+          "description": "List of user skills"
+        },
+        "languages": {
+          "type": "array",
+          "description": "List of languages spoken"
+        },
+        "careerObjective": {
+          "type": "string",
+          "description": "Detailed free text career objective",
+          "maxLength": 1000
+        },
+        "profileCompleted": {
+          "type": "boolean",
+          "description": "Whether onboarding has been completed"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["uid", "profileCompleted", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/User"
+      },
+      "description": "Stores user account information. Only accessible by the owner."
+    },
+    "/career_profiles/{userId}": {
+      "schema": {
+        "$ref": "#/entities/CareerProfile"
+      },
+      "description": "Stores user career profile and onboarding info. Strictly private to the owner."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#4338ca" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="sparkleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#grad)" />
+  <path d="M128 176 C128 152 144 136 168 136 L344 136 C368 136 384 152 384 176 L384 352 C384 376 368 392 344 392 L168 392 C144 392 128 376 128 352 Z" fill="#1e1b4b" opacity="0.35" />
+  <!-- Briefcase Silhouette -->
+  <path d="M152 208 C152 192 164 180 180 180 L332 180 C348 180 360 192 360 208 L360 344 C360 360 348 372 332 372 L180 372 C164 372 152 360 152 344 Z" fill="#ffffff" />
+  <path d="M216 180 L216 156 C216 144 226 134 238 134 L274 134 C286 134 296 144 296 156 L296 180 Z" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" />
+  <!-- Sparkle Badge -->
+  <circle cx="340" cy="180" r="38" fill="url(#sparkleGrad)" />
+  <path d="M340 160 L345 174 L359 180 L345 186 L340 200 L335 186 L321 180 L335 174 Z" fill="#ffffff" />
+  <!-- Fast Track Forward Arrows -->
+  <path d="M210 276 L256 240 L210 204" fill="none" stroke="#4f46e5" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M266 276 L312 240 L266 204" fill="none" stroke="#6366f1" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
